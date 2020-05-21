@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{titulo}}</title>
+    <title>Tabela de Preços</title>
     
     <style> 
         * { margin: 0; padding: 0; }
@@ -17,15 +17,10 @@
     </style>
 </head>
 <body>
-<table>     
-    <tr>
-        <td> 
-            {% for produtos, preco in Tabela %}            
+        {% for produtos, preco in Tabela %}            
             <a href="/prod/{{loop.index0}}">
             {{produtos}}
-        </td>
-    </tr></a>
-    {% endfor %}
-</table>
+      
+        {% endfor %}
 </body>
 </html>

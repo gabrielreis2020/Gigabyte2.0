@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template 
 app = Flask(__name__)
+
 
 Tabela = [
         ['Refrigerante', 4.50],
@@ -18,12 +19,10 @@ def index():
     )
 
 @app.route('/prod/<int:id>')
-def produtos (id):
-    prod = Tabela[id]
-    return render_template(
-        'produtos.html'
-        produtos = preco
-    )
+def produtos(id):
+    produ = Tabela[id]
+    return f'Produtos:{produ[0]}                    Preço{produ[1]}'
+    
     
     
 
